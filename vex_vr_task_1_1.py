@@ -1,3 +1,5 @@
+
+   
 # Library imports
 from vexcode import *
 from math import *
@@ -17,7 +19,6 @@ location = Location()
 
 
 
-setpoint = 550;
 
 def driveXDistance(setpoint,duration):
     # reset the timer
@@ -44,9 +45,9 @@ def driveYDistance(setpoint,duration):
     # loop while the timer is less than the duration input of the function.
     while(brain.timer_time(SECONDS)<duration):
         # Your code goes here!
-        if (location.position(X, MM)< setpoint):
+        if (location.position(Y, MM)< setpoint):
             drivetrain.drive(FORWARD)
-        elif (location.position(X, MM)> setpoint):
+        elif (location.position(Y, MM)> setpoint):
             drivetrain.drive(REVERSE)
         else :
             drivetrain.stop()
@@ -77,12 +78,16 @@ def driveDiagonalDistance(setpoint,duration):
 # Add project code in "main"
 def main():
     pen.move(DOWN)
-    #drivetrain.turn_to_heading(90,DEGREES,wait=True)
-    #driveXDistance(0,3)
-    #drivetrain.turn_to_heading(0,DEGREES,wait=True)
-    #driveYDistance(0,3)
+    drivetrain.turn_to_heading(90,DEGREES,wait=True)
+    driveXDistance(0,3)
+    drivetrain.turn_to_heading(0,DEGREES,wait=True)
+    driveYDistance(0,3)
     drivetrain.turn_to_heading(45,DEGREES,wait=True)
     driveDiagonalDistance(400,4)
 # VR threads — Do not delete
 vr_thread(main())
 
+
+
+
+        
