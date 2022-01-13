@@ -1,5 +1,3 @@
-
-   
 # Library imports
 from vexcode import *
 from math import *
@@ -89,5 +87,7 @@ vr_thread(main())
 
 
 
+
+        
 
         
