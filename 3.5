@@ -30,8 +30,12 @@ while True:
     try:
         sensor_distance = sonar.distance
 
-        # Add your proportional control code here.
-
+        # Add your proportional control code here!
+        
+        position = sensor_distance
+        error = setpoint - position
+        output = k*error 
+        
         if(output > MAX_SPEED):
             output = MAX_SPEED
         elif(output < -MAX_SPEED):
@@ -40,6 +44,7 @@ while True:
         # Read the Sphero RVR library file to find the rvr.setMotors(left,right) command.
         # Use this command in the next line to send the output of your proportional
         # control to both the left and right motors.
+        rvr.setMotors(output,output)
 
     except RuntimeError:
         print("Retrying!")
