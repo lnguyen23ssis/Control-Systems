@@ -6,6 +6,7 @@ from digitalio import DigitalInOut, Direction, Pull
 # LED setup.
 led = DigitalInOut(board.LED)
 led.direction = Direction.OUTPUT
+# Set the direction of the LED to the output of Direction.
 
 # Switch setup
 switch = DigitalInOut(board.D2)
