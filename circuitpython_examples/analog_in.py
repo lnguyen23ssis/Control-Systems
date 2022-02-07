@@ -5,6 +5,7 @@ from analogio import AnalogIn
 
 # Connect an analog sensor to the A1 port of the board you are using. This means a 3V, GND, and signal pin must all be connected.
 analog_in = AnalogIn(board.A1)
+# The analog input is A1
 
 # This function turns the analog reading of the sensor (a number from 0 - 65536) to a voltage.
 def get_voltage(pin):
