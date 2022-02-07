@@ -9,9 +9,9 @@ led.direction = Direction.OUTPUT
 
 # Switch setup
 switch = DigitalInOut(board.D2)
-# The digital input/output of the switch is at pin D2
+# The digital input/output of the switch is D2
 switch.direction = Direction.INPUT
-# The direction of the switch is the input
+# The direction of the switch is the input for the direction
 switch.pull = Pull.UP
 # Pulling the switch means pullling up
 
