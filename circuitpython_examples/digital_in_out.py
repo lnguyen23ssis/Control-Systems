@@ -1,20 +1,19 @@
 """CircuitPython Essentials Digital In Out example - modified by Evan Weinberg"""
 import time
-# import the time so the line time.sleep(0.01) make sense
 import board
-# import board so we can use the codes from the board file
 from digitalio import DigitalInOut, Direction, Pull
-# import DigitalInOut, Direction, and Pull from digitalio
 
 # LED setup.
 led = DigitalInOut(board.LED)
-
 led.direction = Direction.OUTPUT
 
 # Switch setup
 switch = DigitalInOut(board.D2)
+# The digital input/output of the switch is at pin D2
 switch.direction = Direction.INPUT
+# The direction of the switch is the input
 switch.pull = Pull.UP
+# Pulling the switch means pullling up
 
 while True:
     # We could also do "led.value = not switch.value"!
