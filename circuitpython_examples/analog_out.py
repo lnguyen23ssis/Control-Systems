@@ -3,6 +3,7 @@ import board
 from analogio import AnalogOut
 
 analog_out = AnalogOut(board.A0)
+# The analog output is A0
 
 while True:
     # Count up from 0 to 65535, with 64 increment
