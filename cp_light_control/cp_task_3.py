@@ -4,7 +4,10 @@ from analogio import AnalogIn, AnalogOut
 
 while True:
   light = AnalogIn(board.A1)
-  AnalogOut(board.A0) = light.value
-  AnalogOut(board.A2) = light.value
+  red = AnalogOut(board.A0)
+  blue = AnalogOut(board.A2) 
+  
+  red.value = light.value
+  blue.value = light.value
   
 
