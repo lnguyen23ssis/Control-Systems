@@ -1,13 +1,16 @@
+# Write your code here :-)
 import time
 import board
-from analogio import AnalogIn, AnalogOut
+from analogio import AnalogIn
+from analogio import AnalogOut
+
+light = AnalogIn(board.A1)
+red = AnalogOut(board.A0)
+
+  
 
 while True:
-  light = AnalogIn(board.A1)
-  red = AnalogOut(board.A0)
-  blue = AnalogOut(board.A2) 
-  
-  red.value = light.value
-  blue.value = light.value
-  
-
+    print(light.value)
+    time.sleep(0.5)
+    red.value = light.value
+   
